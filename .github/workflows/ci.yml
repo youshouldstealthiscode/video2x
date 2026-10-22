@@ -13,11 +13,11 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
         with:
           submodules: recursive
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
         with:
           python-version: 3.9
       - name: Install dependencies
@@ -35,7 +35,7 @@ jobs:
         run: |
           tar cJvf /tmp/video2x-nightly-wheels.txz /tmp/wheels/*
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: video2x-nightly-wheels
           path: /tmp/video2x-nightly-wheels.txz
